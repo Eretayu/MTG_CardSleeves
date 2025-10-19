@@ -3,3 +3,21 @@ h1 {
     font-family: 'Arial', sans-serif;
     text-align: center;
 }
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    font-family: 'Verdana', sans-serif;
+    background-image: url('');
+}
+
+body {
+    width: 300px;
+    margin: 100px auto;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 500px;
+    background-color: #f60606;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}

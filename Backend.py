@@ -8,7 +8,17 @@ def welcome():
 
 @app.route("/homepage")
 def index():
-    return render_template("homepage.html")
+    username = request.form.get('username')     
+    user = "tester"
+    if username == user:
+        return render_template("homepage.html")
+    else:
+        return "Invalid User"
+    
+    
+    
+
+
 
 @app.route('/process_data', methods=['POST'])
 def process_data():
