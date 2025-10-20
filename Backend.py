@@ -20,14 +20,8 @@ def index():
 
 
 
-@app.route('/process_data', methods=['POST'])
-def process_data():
-    if request.method == 'POST':
-        username = request.form.get('username')
 
-        print(f"Received Username: {username}")
         
-
 
 if __name__ == "__main__":
     app.run()(debug=True)
