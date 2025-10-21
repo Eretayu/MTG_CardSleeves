@@ -1,0 +1,83 @@
+:root{
+    --image-url: url('/static/loginbackground1.jpg');
+}
+
+
+.box {
+    border: 2px solid black;
+    border-radius: 2%;
+    width: 60%;
+    margin: auto;
+    margin-top: 7%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(5px);
+    
+}
+
+.title {
+    text-align: center;
+}
+
+.header {
+    text-align: center;
+}
+
+.request {
+    text-align: center;
+}
+
+.username_button {
+    text-align: center;
+}
+
+.subheader {
+    text-align: center;
+}
+
+.subheading {
+    text-align: center;
+}
+
+.info_button {
+    text-align: center;
+    border-radius: 10%;
+    max-width: 200px;
+    margin: 0 auto;
+    padding: 5px;
+    background-color: transparent;
+    backdrop-filter: blur(5px);
+    border: 1px solid black;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+
+    transition: transform 0.3s ease;
+}
+
+.hidden-text-fade{
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.info_button{
+    opacity: 1;
+    visibility: visible;
+}
+
+.info_button:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+
+body {
+    background-image: var(--image-url);
+    background-position-y: 0%;
+    background-position-x: center;
+    background-size: auto 167%;
+    background-repeat: no-repeat;
+    height : 100%;
+    font-family: Arial, sans-serif;
+}

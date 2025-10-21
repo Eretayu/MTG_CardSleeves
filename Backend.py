@@ -11,7 +11,7 @@ def index():
     username = request.form.get('username')     
     user = "tester"
     if username == user:
-        return render_template("homepage.html")
+        return "good job!"
     else:
         return "Invalid User"
     
@@ -24,4 +24,4 @@ def index():
         
 
 if __name__ == "__main__":
-    app.run()(debug=True)
+    app.run(debug=True)

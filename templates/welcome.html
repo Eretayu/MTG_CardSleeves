@@ -3,25 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="welecome_style.css">
+    
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='welcome_style.css') }}">
 
     <title>CardSleeves - Sign In</title>
 
 </head>
 <body>
-    <h1>Welcome To Card Sleeves
-        <p1>An online space to save, sort, and organize your magic the gathering cards</p1>
+    <div class="box">  
     
-    <h2>Please insert your username and password</h2>
+    <h1 class = "title">Welcome To Card Sleeves</h1>
+    
+    <div class="header">An online space to save, sort, and organize your magic the gathering cards</div>
+    
+    <div class="subheader">Sign In Below</div>
+    
+    <div class = "request">To continue, please list the username which you have used to store your collection</div>
+    
+    <form class = "username_button" action="/checkUsername" method="post">
+        <label for="username_button">Username:</label><br>
+        <input type="text" id="username" name="username"><br><br>
+        <input type="submit" value="Submit">
+    <form> 
 
-        <form action="/process_data" method="post">
-            <label for="username">Name:</label><br>
-            <input type="text" id="username" name="username"><br><br>
-            <input type="submit" value="Submit">
-        <form> 
+    </div>
+    <a href = "homepage.html" target = "_blank">
+        <div class = info_button>
+            <h2 class = subheading>Additional Info</h2>
+            <span class = "hidden-text-fade">
+                > Click here for more information about Card Sleeves and how to use it!
+            </span>
+        </div>
+    </a>
+
+ 
 
     
-        <a href="/homepage">home</a>
-    </h1>
 </body>
 </html>
