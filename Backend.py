@@ -16,17 +16,10 @@ try:
     result = cursor.fetchall()
     print('SQLite Version is {}'.format(result[0][0]))
 
-    # Close the cursor after use
-    cursor.close()
 
 except sqlite3.Error as error:
     print('Error occurred -', error)
 
-finally:
-    # Ensure the database connection is closed
-    if sqliteConnection:
-        sqliteConnection.close()
-        print('SQLite Connection closed')
 
 ######GEEKS FOR GEEKS CONNECTION TESTING CODE######
 
@@ -63,21 +56,26 @@ def process_data():
 
 if __name__ == "__main__":
     app.run(debug=True, port=5001)
+"""
+cursor.execute("CREATE TABLE users (userID INT UNIQUE, username VARCHAR(50), tblID INT AUTO_INCREMENT PRIMARY KEY NOT NULL);")
 
-cursor.execute()
+sql = f"INSERT INTO users (userID, username) VALUES (%s, %s);"
+val = [
+    (1, 'testuser')
+    (2, 'tobi')
+    (3, 'somethingwhocares')
+]
 
 
+cursor.execute(sql,val)
 
 
 cursor.commit()
 cursor.close()
+"""
 
 
+cursor.execute("SHOW TABLES;")
 
-
-query1 = "SELECT * FROM users"
-cursor.execute(query1)
-records = cursor.fetchall()
-for x in records:
-    print(x)
+tables = cursor.fetchall()
 
