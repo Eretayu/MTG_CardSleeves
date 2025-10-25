@@ -20,27 +20,64 @@
     
     <div class = "request">To continue, please list the username which you have used to store your collection</div>
     
-    <form class = "username_button" action="/checkUsername" method="post">
-        <label for="username_button">Username:</label><br>
-        <input type="text" id="username" name="username"><br><br>
-        <inputSo with position: relative; bottom: 20px, the button moves 20px up from where it would normally appear, which is below the .box container in the normal document flow.
-        
-         type="submit" value="Submit">
-    <form> 
+    
+
+    
+
 
     </div>
 
-    <a href = "/intro.html" target = "_blank">
+
+    
+    <a onclick="showInfo()">
+    <div class = "info_icon">
         <div class = info_button>
-            <span class = "hidden-text-fade">
+            <span class = "hidden-text-fade1">
                 Additional Information
             </span>
         </div>
-    </a>
+    </a>  
+
+    <div class = "info_box" id="myDIV">
+        MTG Card Sleeves is a student coding project with the aim of creating a user-friendly database for fans of the popular Card Game Magic The Gathering to store, sort, and organize digital copies of their cards.   
+    </div>
+
+    <script>
+    function showInfo() {
+        var x = document.getElementById("myDIV");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+    }
+    </script> 
 
 
- 
 
-    
+    <a onclick="Go()">
+    <div class = "go_icon">
+        <div class = go_button>
+            <span class = "hidden-text-fade2">
+                Head to Card Collection
+            </span>
+        </div>
+    </a>  
+
+    <div class = "go_box" id="myGO">
+        TEST.   
+    </div>
+
+    <script>
+    function Go() {
+        var x = document.getElementById("myGO");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+    }
+    </script> 
+
 </body>
 </html>

@@ -37,6 +37,23 @@
     text-align: center;
 }
 
+/* TOME OF GLADWICK */
+
+.info_box {
+    border: 2px solid;
+    border-radius: 25%;
+    border-color: goldenrod;
+    width: 50%;
+    height: fit-content;
+    text-align: center;
+    padding: 10px;
+    background-color: black;
+    backdrop-filter: blur(5px);
+    color: white;
+    position: absolute; bottom: 50%;
+    position: absolute; left: 25%;
+    display: none;
+}
 
 
 .info_button {
@@ -47,11 +64,11 @@
     position: relative;
     background-size: contain;
     background-repeat: no-repeat;
-    position: absolute; bottom: 35px;
+    position: absolute; bottom: 50px;
     position: absolute; right: 25px;
 }
 
-.hidden-text-fade{
+.hidden-text-fade1{
     border: 2px solid goldenrod;
     border-radius: 10%;
     width: 120px;
@@ -66,7 +83,7 @@
     position: absolute;
 }
 
-.info_button:hover .hidden-text-fade{
+.info_button:hover .hidden-text-fade1{
     opacity: 1;
     visibility: visible;
     position: absolute;
@@ -77,6 +94,67 @@
     cursor: pointer;
 
 }
+/* LIGHTING BOLT */
+
+.go_box {
+    border: 2px solid;
+    border-radius: 25%;
+    border-color: lightskyblue;
+    width: 50%;
+    height: fit-content;
+    text-align: center;
+    padding: 10px;
+    background-color: black;
+    backdrop-filter: blur(5px);
+    color: white;
+    position: absolute; bottom: 50%;
+    position: absolute; left: 25%;
+    display: none;
+}
+
+
+.go_button {
+    background-image: url('goButton.png');
+    transition: transform 0.3s ease;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute; bottom: 50px;
+    position: absolute; left: 100px;
+}
+
+.hidden-text-fade2{
+    border: 2px solid lightskyblue;
+    border-radius: 10%;
+    width: 120px;
+    height: 175px;
+    text-align: center;
+    padding: 10px;
+    backdrop-filter: blur(5px);
+    color: lightskyblue;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    position: absolute;
+}
+
+.go_button:hover .hidden-text-fade2{
+    opacity: 1;
+    visibility: visible;
+    position: absolute;
+}
+
+.go_button:hover {
+    transform: scale(1.25);
+    cursor: pointer;
+
+}
+/* END */
+
+
+
 
 body {
     background-image: var(--image-url);

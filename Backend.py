@@ -52,30 +52,36 @@ def process_data():
         print(debug)
     return "No data received"
 
-        
+"""        
+cursor.execute("DROP TABLE IF EXISTS users;")
+sqliteConnection.commit()
 
-if __name__ == "__main__":
-    app.run(debug=True, port=5001)
-"""
-cursor.execute("CREATE TABLE users (userID INT UNIQUE, username VARCHAR(50), tblID INT AUTO_INCREMENT PRIMARY KEY NOT NULL);")
+
+cursor.execute("CREATE TABLE users (userID INT UNIQUE, username VARCHAR(50), tblID INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL);")
 
 sql = f"INSERT INTO users (userID, username) VALUES (%s, %s);"
 val = [
-    (1, 'testuser')
-    (2, 'tobi')
+    (1, 'testuser'),
+    (2, 'tobi'),
     (3, 'somethingwhocares')
 ]
 
 
-cursor.execute(sql,val)
+cursor.execute(sql, val)
 
 
-cursor.commit()
+sqliteConnection.commit()
+
+
+cursor.execute("SELECT * FROM users;")
+
+cur = cursor.fetchall()
+
+for row in cur:
+    print(row)
+
+
 cursor.close()
 """
-
-
-cursor.execute("SHOW TABLES;")
-
-tables = cursor.fetchall()
-
+if __name__ == "__main__":
+    app.run(debug=True, port=5001)
