@@ -16,17 +16,8 @@
     
     <div class="header">An online space to save, sort, and organize your magic the gathering cards</div>
     
-    <div class="subheader">Sign In Below</div>
     
-    <div class = "request">To continue, please list the username which you have used to store your collection</div>
-    
-    
-
-    
-
-
     </div>
-
 
     
     <a onclick="showInfo()">
@@ -39,7 +30,8 @@
     </a>  
 
     <div class = "info_box" id="myDIV">
-        MTG Card Sleeves is a student coding project with the aim of creating a user-friendly database for fans of the popular Card Game Magic The Gathering to store, sort, and organize digital copies of their cards.   
+        MTG Card Sleeves is a student coding project with the aim of creating a user-friendly database for fans of the popular Card Game Magic The Gathering to store, sort, and organize digital copies of their cards.
+        <button onclick="closeInfo()" class = "info_button_close">Close</button>   
     </div>
 
     <script>
@@ -50,6 +42,10 @@
         } else {
           x.style.display = "none";
         }
+    }
+    function closeInfo() {
+        var y = document.getElementById("myDIV");
+        y.style.display = "none";
     }
     </script> 
 
@@ -65,7 +61,12 @@
     </a>  
 
     <div class = "go_box" id="myGO">
-        TEST.   
+        Please insert your username to be directed directly to your collection!
+        <form action="/homepage" method="POST">
+            <label for="username">Username:</label><br>
+            <input type="text" id="username" name="username"><br><br>
+            <input type="submit" value="Sign In">
+        </form>
     </div>
 
     <script>
