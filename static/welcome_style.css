@@ -32,7 +32,7 @@
   width: 50%;
   height: fit-content;
   text-align: center;
-  padding: 10px;
+  padding: 25px;
   background-color: black;
   backdrop-filter: blur(5px);
   color: white;
@@ -55,6 +55,13 @@
   bottom: 50px;
   position: absolute;
   right: 25px;
+}
+
+.info_button_close {
+  background-image: url("redX.png");
+  position: absolute;
+  left: 46%;
+  bottom: 5%;
 }
 
 .hidden-text-fade1 {
